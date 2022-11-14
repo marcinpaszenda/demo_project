@@ -2,7 +2,6 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.5'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    id 'com.vaadin' version '23.2.7'
 }
 
 group = 'com.example'
@@ -14,7 +13,7 @@ repositories {
 }
 
 jar {
-    enabled = true
+    enabled = false
 }
 
 dependencies {
@@ -23,6 +22,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     runtimeOnly 'com.mysql:mysql-connector-j'
+    runtimeOnly 'org.postgresql:postgresql:42.5.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
